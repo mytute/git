@@ -1,7 +1,7 @@
 ## GIT TUTORIAL
 
 
-to set git global setup 
+to set git global setup
 ```bash
 
 git config --global user.name "Samadhi Laksahan"
@@ -76,15 +76,15 @@ $ git push <created repo github url> <branch name>
 to add remote repo url to git
 ```bash
 
-$ git remote add  origin <created repo github url> 
+$ git remote add  origin <created repo github url>
 
 ```
 
-to see remote repo location 
+to see remote repo location
 ```bash
 
 $ git remote -v
-or 
+or
 $ git config --get remote.origin.url
 
 ```
@@ -133,7 +133,7 @@ $ git checkout 'v1.0'
 ```
 
 to recover stash for pull
-$ git stash 
+$ git stash
 to recover stash after push
 $ git stash apply
 to see stash list
@@ -149,3 +149,19 @@ $ssh -T git@gitlab.com
 to change current ssh account key
 $ eval $(ssh-agent -s)
 $ ssh-add <path to private SSH key>
+
+to create private key     
+
+1. login to github > "settings" > "Developer settings" > "Personal access tokens".        
+2. add note and select "repo" as "Select scopes".     
+3. click "generate token" and copy the generated token.
+4. generated token can use instance your password.
+
+to set cache token     
+```bash
+$ git config --global credential.helper cache
+```
+to unset cache token     
+```bash
+$ git config --global --unset credential.helper
+```
